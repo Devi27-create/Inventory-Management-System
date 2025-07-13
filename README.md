@@ -23,4 +23,4 @@ For this case, we utilized four essential datasets that serve as the backbone of
 These datasets work in harmony to create an effective and insightful inventory management solution.
 
 # Entity-Relationship Digram
-![Alt text]()
+![Alt text](https://github.com/Devi27-create/Inventory-Management-System/blob/main/Relationship%20Diagram.png)
