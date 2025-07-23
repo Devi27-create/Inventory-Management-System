@@ -6,9 +6,6 @@ The Inventory Management System is a comprehensive system designed to efficientl
 # Problem Statement
 An effective inventory management system empowers businesses to answer fundamental questions related to their inventory. Notably, it can provide insights into product availability and the quantity of each specific item currently in stock. This valuable information helps identify which products are in need of replenishment. Additionally, the system can highlight top-selling items, allowing businesses to strategize better. With these analytics, companies are also equipped to calculate total revenue over specific time periods, providing a clearer picture of their financial performance.
 
-# Problem Statement
-An effective inventory management system 
-
 # Datasets used
 For this case, we utilized four essential datasets that serve as the backbone of our inventory management system:
 
