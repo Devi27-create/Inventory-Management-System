@@ -104,6 +104,7 @@ values ((select product_id from products where product_name = 'Monitor'),20);
 select * from inventory
 select * from products
 ```
+  
 -- Results:
 -- inventory_id|product_id|quantity|supplier_id|last_updated|
 -- ------------+----------+--------+-----------+------------+
@@ -141,6 +142,7 @@ where product_id = 3
 select * from inventory
 select * from products
 ```
+  
 -- Results:
 -- inventory_id|product_id|quantity|supplier_id|last_updated|
 -- ------------+----------+--------+-----------+------------+
