@@ -3,8 +3,10 @@
 
 
 -- Question-1: Checking Product Stock Levels
+```sql
 select p.product_name, i.quantity from products as p join inventory as i on p.product_id=i.product_id
-
+```
+  
 -- Results:
 -- product_name|quantity|
 -- ------------+--------+
