@@ -12,7 +12,6 @@ select p.product_name, i.quantity from products as p join inventory as i on p.pr
 -- Desk Chair  |      20|
 -- Notebook    |     100|
 
-
   
 -- Question-2: Decrease the quantity of the product with product_id 2 (desks) by 3 units after a sale.
 -- Update Stock After a Sale.
@@ -30,7 +29,6 @@ where product_id= 2;
 --            3|       	 3|   	100|	        2|	2025-07-13|
 
 
-
 -- Question-3: Increase the quantity of the product with product_id 1 (laptops) by 10 units after a purchase.
 ```sql
 update inventory
@@ -44,7 +42,6 @@ where product_id = 1;
 --            1|         1|      20|	        1|	2025-07-13|
 --            2|	       2|	     17|	        2|	2025-07-13|
 --            3|       	 3|   	100|	        2|	2025-07-13|
-
 
 
 -- Question-4: View Transaction History for the product_name Laptop.
@@ -62,7 +59,6 @@ where p.product_id =1;
 -- Laptop      |sale            |	     2025-07-13|	     5|
 
 
-
 -- Question-5: Identify products that have stock levels below a certain threshold, such as 5 units.
 ```sql
 select p.product_name, i.quantity from products as p join inventory as i on p.product_id=i.product_id
@@ -73,7 +69,6 @@ where i.quantity<5
 -- product_name|quantity|
 -- ------------+--------+
 --             |        | -- No output was generated here because no product was less than 5 units
-
 
   
 -- Question-6: Generate a report showing the total number of products sold in july 2025.
@@ -91,7 +86,6 @@ group by p.product_name
 -- Laptop      |                  5|
 
 
-  
 -- Question-7: Insert a new product 'Monitor' into the Products table with category 'Electronics' and price 150.00 and 
 -- Insert an initial stock quantity of 20 for the new product in the Inventory table.
 ```sql
@@ -113,7 +107,7 @@ select * from products
 --            3|       	 3|   	100|	        2|	2025-07-13|
 --            4|         4|      20|       NULL|	2025-07-13|
   
--- product_id|product_name|price   |category    |
+-- product_id|product_name|price   |category   |
 -- ----------+------------+--------+-----------+
 --          1|Laptop      | 1200.00|Electronics|
 --          2|Desk Chair  |	 150.00|Furniture  |
@@ -156,7 +150,6 @@ select * from products
 --          2|Desk Chair  |	 150.00|Furniture  |
 --          4|Monitor     |  150.00|Electronics|
 
-
   
 -- Question-9: calculate total value for each product.
 ```sql
@@ -170,7 +163,6 @@ from products as p join inventory as i on p.product_id=i.product_id;
 -- Laptop      |      20| 1200.00|   24000.00|
 -- Desk Chair  |	    17|  150.00|    2550.00|
 -- Monitor     |      20|  150.00|    3000.00|
-
 
 
 -- Question-10: Show Products with Transactions to include all products, even those with no matching transactions.
@@ -188,17 +180,16 @@ having MAX(t.transaction_date) is null or MAX(t.transaction_date) < '2025-07-01'
 -- Monitor     |
 
 
-
 -- Question-11:List Products with No Stock.
 ```sql
 select p.product_name from Inventory as i join products as p on i.product_id = p.product_id
 WHERE i.quantity = 0;
 ```
+
 -- Results:
 -- product_name|
 -- ------------+
 --             |   -- No output was generated here because no product quantity was zero
-
 
 
 -- Question-12: View Stock Levels for Multiple Products.
@@ -211,7 +202,6 @@ where p.product_id In (1,2)
 -- ------------+--------+
 -- Laptop      |      20|
 -- Desk Chair  |	    17|
-
 
   
 -- Question-13: List All Products Sold Today.
@@ -226,7 +216,6 @@ where t.transaction_type = 'sale' and t.transaction_date = cast(getdate() as dat
 -- product_name|quantity|
 -- ------------+--------+
 -- Laptop      |       5|
-
 
 
 -- Question-14: Find the Most Sold Product.
@@ -245,7 +234,6 @@ order by total_sold desc
 -- Laptop      |       5|
 
 
-
 -- Question-15: Calculate Total Revenue for a Given Period.
 ```sql
 select sum(t.quantity * p.price) as total_revenue
@@ -259,6 +247,3 @@ AND t.transaction_date BETWEEN '2025-07-01' AND '2025-07-31';
 -- total_revenue|
 -- -------------+
 --       6000.00|
-
-
-
