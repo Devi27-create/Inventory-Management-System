@@ -247,3 +247,8 @@ AND t.transaction_date BETWEEN '2025-07-01' AND '2025-07-31';
 -- total_revenue|
 -- -------------+
 --       6000.00|
+
+
+
+
+
